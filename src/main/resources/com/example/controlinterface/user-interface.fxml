@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="478.5" prefWidth="850.0" styleClass="userInterface" stylesheets="@../../../CSS/myBackgroundStyle.css">
+         <children>
+            <GridPane prefHeight="479.0" prefWidth="850.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="390.0" minWidth="10.0" prefWidth="303.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="483.0" minWidth="10.0" prefWidth="477.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="113.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="328.0" minHeight="10.0" prefHeight="301.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="286.0" minHeight="0.0" prefHeight="65.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <padding>
+                  <Insets left="70.0" />
+               </padding>
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="296.0" prefWidth="303.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Registro" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="18.0" prefWidth="263.0" text="Nombre" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="11.0" />
+                           </font>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="txtNombre" />
+                        <Label prefHeight="18.0" prefWidth="263.0" text="Identificacion" textFill="WHITE">
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textFieldId" onKeyTyped="#RestrictCharactersId" />
+                        <Label prefHeight="18.0" prefWidth="263.0" text="Edad" textFill="WHITE">
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="choiceAge" onAction="#getAgeSelected" prefHeight="26.0" prefWidth="263.0" />
+                        <HBox prefHeight="42.0" prefWidth="263.0" spacing="20.0">
+                           <children>
+                              <CheckBox fx:id="radioAffiliatted" mnemonicParsing="false" onAction="#isAffiliattedSelected" prefHeight="32.0" prefWidth="170.0" text="Te encentras afiliado ?" textFill="WHITE" />
+                           </children>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </HBox>
+                        <ComboBox fx:id="selectorCate" onAction="#selectedCategory" prefHeight="26.0" prefWidth="263.0">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           
+                        </ComboBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="15.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+                     <children>
+                        <Button fx:id="exportButton" mnemonicParsing="false" onAction="#SwitchScene3" text="Continuar" />
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

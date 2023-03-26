@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="478.5" prefWidth="850.0" styleClass="resumeBackground" stylesheets="@../../../CSS/myBackgroundStyle.css">
+         <children>
+            <GridPane prefHeight="479.0" prefWidth="850.0" styleClass="resumeBackground" stylesheets="@../../../CSS/myBackgroundStyle.css">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="528.0" minWidth="10.0" prefWidth="49.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="757.0" minWidth="6.0" prefWidth="754.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="801.0" minWidth="10.0" prefWidth="48.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="128.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="328.0" minHeight="10.0" prefHeight="247.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="328.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="286.0" minHeight="0.0" prefHeight="60.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Resumen de compra" textFill="#575757">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font></Label>
+                        <GridPane fx:id="gridResume" alignment="BASELINE_RIGHT">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label alignment="TOP_CENTER" contentDisplay="BOTTOM" text="Nombre" textFill="#575757">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font></Label>
+                              <Label alignment="CENTER" contentDisplay="TOP" prefHeight="17.0" prefWidth="139.0" text="Estado" textFill="#575757" GridPane.columnIndex="3">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font></Label>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="139.0" text="Precio" textFill="#575757" GridPane.columnIndex="5">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font></Label>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="139.0" text="Tipo" textFill="#575757" textOverrun="CLIP" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font></Label>
+                              <Label alignment="CENTER" contentDisplay="TOP" prefHeight="17.0" prefWidth="139.0" text="Categoria" textFill="#575757" GridPane.columnIndex="4">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font></Label>
+                              <Label alignment="CENTER" layoutX="242.0" layoutY="17.0" prefHeight="17.0" prefWidth="139.0" text="Identificación" textFill="#575757" textOverrun="CLIP" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </padding>
+                  </VBox>
+                  <FlowPane alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="754.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+
+                     <children>
+                        <Label prefHeight="16.0" prefWidth="53.0" text="Total:" textFill="#575757">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font></Label>
+                        <Label fx:id="labelPrice" prefHeight="16.0" prefWidth="73.0" text="0" textFill="#575757">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </padding></FlowPane>
+                  <FlowPane alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="754.0" rowValignment="BOTTOM" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#SwitchScene2" prefHeight="23.0" prefWidth="120.0" styleClass="btn" stylesheets="@../../../CSS/btnStyles.css" text="Agregar visitante">
+                           <FlowPane.margin>
+                              <Insets right="30.0" />
+                           </FlowPane.margin>
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font></Button>
+                        <Button mnemonicParsing="false" onAction="#SwitchScene4" prefHeight="23.0" prefWidth="84.0" styleClass="btn" stylesheets="@../../../CSS/btnStyles.css" text="Continuar">
+                           <FlowPane.margin>
+                              <Insets right="10.0" />
+                           </FlowPane.margin>
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font></Button>
+                     </children>
+                  </FlowPane>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
